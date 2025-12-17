@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"os"
 )
@@ -12,11 +13,17 @@ func main() {
 
 	switch command {
 	case ".dbinfo":
-		_ , err := os.Open(databaseFilePath)
+		dbFile , err := os.Open(databaseFilePath)
 
 		if err != nil {
 			fmt.Println("[ERROR] : file Open fail " + err.Error())
 		}
+
+		header := make([]byte, 120)
+	default: 
+		fmt.Println("[Error] : Unkonown command")
+		os.Exit(1)
 	}
+	
 
 }
