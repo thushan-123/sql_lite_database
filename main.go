@@ -23,6 +23,10 @@ func main() {
 
 		_, err = dbFile.Read(header)
 
+		if err != nil {
+			fmt.Println("[ERROR] : " + err.Error())
+		}
+
 		pageSize := binary.BigEndian.Uint16(header[16:18])
 		numberOfTable := binary.BigEndian.Uint16(header[103:105])
 
