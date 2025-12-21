@@ -1,0 +1,29 @@
+example.db
+
+# Binaries for programs
+*.exe
+*.dll
+*.so
+*.dylib
+*.out
+[Dd]ebug/
+[Rr]elease/
+
+# Test binary, generated with "go test -c"
+*.test
+
+# Output of the coverage tool, specifically coverage.out
+coverage.out
+
+# Gopath
+# Uncomment one of these to ignore the go path directories and all their content.
+# /bin/
+# /pkg/
+
+# Project-local vendored dependencies.
+# If you commit them, uncomment the following line to ignore the vendor directory
+# itself and only track the source files.
+# vendor/
+
+# Environment-specific files
+.env
